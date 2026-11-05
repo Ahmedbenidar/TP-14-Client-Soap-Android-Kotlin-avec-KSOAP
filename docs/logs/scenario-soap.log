@@ -1,0 +1,45 @@
+================================================================
+ 1. getComptes - liste initiale
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:getComptes/></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getComptesResponse xmlns:ns2="http://ws.soapAcount/"><compte><id>1</id><titulaire>Ahmed Benidar</titulaire><solde>18500.0</solde><dateCreation>2024-01-15</dateCreation><type>COURANT</type></compte><compte><id>2</id><titulaire>Salma El Fassi</titulaire><solde>72350.5</solde><dateCreation>2024-02-03</dateCreation><type>EPARGNE</type></compte><compte><id>3</id><titulaire>Youssef Ouazzani</titulaire><solde>9400.75</solde><dateCreation>2024-03-21</dateCreation><type>COURANT</type></compte><compte><id>4</id><titulaire>Nadia Bouhaddou</titulaire><solde>152000.0</solde><dateCreation>2024-04-08</dateCreation><type>EPARGNE</type></compte><compte><id>5</id><titulaire>Karim Tazi</titulaire><solde>32680.25</solde><dateCreation>2024-05-30</dateCreation><type>PROFESSIONNEL</type></compte><compte><id>6</id><titulaire>Imane Cherkaoui</titulaire><solde>5100.0</solde><dateCreation>2024-06-12</dateCreation><type>COURANT</type></compte></ns2:getComptesResponse></soap:Body></soap:Envelope>
+
+================================================================
+ 2. createCompte - ouverture d un compte EPARGNE
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:createCompte><solde>63500.75</solde><type>EPARGNE</type></ws:createCompte></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:createCompteResponse xmlns:ns2="http://ws.soapAcount/"><compte><id>7</id><titulaire>Client guichet</titulaire><solde>63500.75</solde><dateCreation>2026-11-05</dateCreation><type>EPARGNE</type></compte></ns2:createCompteResponse></soap:Body></soap:Envelope>
+
+================================================================
+ 3. getComptes - apres ouverture
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:getComptes/></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getComptesResponse xmlns:ns2="http://ws.soapAcount/"><compte><id>1</id><titulaire>Ahmed Benidar</titulaire><solde>18500.0</solde><dateCreation>2024-01-15</dateCreation><type>COURANT</type></compte><compte><id>2</id><titulaire>Salma El Fassi</titulaire><solde>72350.5</solde><dateCreation>2024-02-03</dateCreation><type>EPARGNE</type></compte><compte><id>3</id><titulaire>Youssef Ouazzani</titulaire><solde>9400.75</solde><dateCreation>2024-03-21</dateCreation><type>COURANT</type></compte><compte><id>4</id><titulaire>Nadia Bouhaddou</titulaire><solde>152000.0</solde><dateCreation>2024-04-08</dateCreation><type>EPARGNE</type></compte><compte><id>5</id><titulaire>Karim Tazi</titulaire><solde>32680.25</solde><dateCreation>2024-05-30</dateCreation><type>PROFESSIONNEL</type></compte><compte><id>6</id><titulaire>Imane Cherkaoui</titulaire><solde>5100.0</solde><dateCreation>2024-06-12</dateCreation><type>COURANT</type></compte><compte><id>7</id><titulaire>Client guichet</titulaire><solde>63500.75</solde><dateCreation>2026-11-05</dateCreation><type>EPARGNE</type></compte></ns2:getComptesResponse></soap:Body></soap:Envelope>
+
+================================================================
+ 4. getSoldeGlobal - encours total
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:getSoldeGlobal/></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getSoldeGlobalResponse xmlns:ns2="http://ws.soapAcount/"><total>353532.25</total></ns2:getSoldeGlobalResponse></soap:Body></soap:Envelope>
+
+================================================================
+ 5. getComptesParType - comptes EPARGNE
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:getComptesParType><type>EPARGNE</type></ws:getComptesParType></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getComptesParTypeResponse xmlns:ns2="http://ws.soapAcount/"><compte><id>4</id><titulaire>Nadia Bouhaddou</titulaire><solde>152000.0</solde><dateCreation>2024-04-08</dateCreation><type>EPARGNE</type></compte><compte><id>2</id><titulaire>Salma El Fassi</titulaire><solde>72350.5</solde><dateCreation>2024-02-03</dateCreation><type>EPARGNE</type></compte><compte><id>7</id><titulaire>Client guichet</titulaire><solde>63500.75</solde><dateCreation>2026-11-05</dateCreation><type>EPARGNE</type></compte></ns2:getComptesParTypeResponse></soap:Body></soap:Envelope>
+

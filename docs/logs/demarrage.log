@@ -1,0 +1,34 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.1.12)
+
+19:32:32.655 INFO  m.a.tp14.Tp14BanqueSoapApplication         : Starting Tp14BanqueSoapApplication v1.0.0 using Java 21.0.9 with PID 10448 (C:\Users\dell\Desktop\tp14_client_soap_kotlin\backend\target\tp14-banque-soap-ksoap.jar started by dell in C:\Users\dell\Desktop\revision_micro)
+19:32:32.661 INFO  m.a.tp14.Tp14BanqueSoapApplication         : No active profile set, falling back to 1 default profile: "default"
+19:32:34.484 INFO  o.s.d.r.c.RepositoryConfigurationDelegate  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:32:34.621 INFO  o.s.d.r.c.RepositoryConfigurationDelegate  : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interface.
+19:32:36.091 INFO  o.s.b.w.embedded.tomcat.TomcatWebServer    : Tomcat initialized with port(s): 8084 (http)
+19:32:36.117 INFO  o.apache.catalina.core.StandardService     : Starting service [Tomcat]
+19:32:36.118 INFO  org.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+19:32:36.229 INFO  o.a.c.c.C.[Tomcat].[localhost].[/]         : Initializing Spring embedded WebApplicationContext
+19:32:36.231 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3455 ms
+19:32:36.508 INFO  com.zaxxer.hikari.HikariDataSource         : HikariPool-1 - Starting...
+19:32:36.978 INFO  com.zaxxer.hikari.pool.HikariPool          : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:tp14db user=SA
+19:32:36.982 INFO  com.zaxxer.hikari.HikariDataSource         : HikariPool-1 - Start completed.
+19:32:37.009 INFO  o.s.b.a.h2.H2ConsoleAutoConfiguration      : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:tp14db'
+19:32:37.250 INFO  o.hibernate.jpa.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default]
+19:32:37.402 INFO  org.hibernate.Version                      : HHH000412: Hibernate ORM core version 6.2.25.Final
+19:32:37.407 INFO  org.hibernate.cfg.Environment              : HHH000406: Using bytecode reflection optimizer
+19:32:38.012 INFO  o.s.o.j.p.SpringPersistenceUnitInfo        : No LoadTimeWeaver setup: ignoring JPA class transformer
+19:32:39.366 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator         : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:32:39.455 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:32:40.215 INFO  o.a.c.w.s.f.ReflectionServiceFactoryBean   : Creating Service {http://ws.soapAcount/}BanqueKsoapWS from class ma.ahmedbenidar.tp14.ws.CompteSoapService
+19:32:41.057 INFO  org.apache.cxf.endpoint.ServerImpl         : Setting the server's publish address to be /ws
+19:32:41.140 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:32:41.714 INFO  o.s.b.w.embedded.tomcat.TomcatWebServer    : Tomcat started on port(s): 8084 (http) with context path ''
+19:32:41.749 INFO  m.a.tp14.Tp14BanqueSoapApplication         : Started Tp14BanqueSoapApplication in 9.966 seconds (process running for 11.103)
+Comptes de demonstration charges : 6

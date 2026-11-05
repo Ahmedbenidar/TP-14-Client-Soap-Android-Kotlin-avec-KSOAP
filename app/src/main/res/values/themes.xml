@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.BanqueSoapKsoap" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#1A237E</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">#00796B</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="android:statusBarColor">#0D1440</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>

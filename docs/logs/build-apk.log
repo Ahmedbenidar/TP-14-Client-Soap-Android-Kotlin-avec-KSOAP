@@ -1,0 +1,17 @@
+> gradlew.bat assembleDebug
+
+BUILD SUCCESSFUL
+
+> dir app\build\outputs\apk\debug
+
+app-debug.apk           7 302 125 octets
+output-metadata.json          408 octets
+
+> adb install -r app-debug.apk
+
+Performing Streamed Install
+Success
+
+> adb shell pm list packages | findstr soapclient
+
+package:ma.ahmedbenidar.soapclient

@@ -1,0 +1,27 @@
+================================================================
+ 6. getCompteById - consultation du compte cree
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:getCompteById><id>7</id></ws:getCompteById></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCompteByIdResponse xmlns:ns2="http://ws.soapAcount/"><compte><id>7</id><titulaire>Client guichet</titulaire><solde>63500.75</solde><dateCreation>2026-11-05</dateCreation><type>EPARGNE</type></compte></ns2:getCompteByIdResponse></soap:Body></soap:Envelope>
+
+================================================================
+ 7. deleteCompte - cloture du compte cree
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:deleteCompte><id>7</id></ws:deleteCompte></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:deleteCompteResponse xmlns:ns2="http://ws.soapAcount/"><supprime>true</supprime></ns2:deleteCompteResponse></soap:Body></soap:Envelope>
+
+================================================================
+ 8. getComptes - liste finale
+================================================================
+POST http://localhost:8084/services/ws
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.soapAcount/"><soapenv:Header/><soapenv:Body><ws:getComptes/></soapenv:Body></soapenv:Envelope>
+
+HTTP 200
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getComptesResponse xmlns:ns2="http://ws.soapAcount/"><compte><id>1</id><titulaire>Ahmed Benidar</titulaire><solde>18500.0</solde><dateCreation>2024-01-15</dateCreation><type>COURANT</type></compte><compte><id>2</id><titulaire>Salma El Fassi</titulaire><solde>72350.5</solde><dateCreation>2024-02-03</dateCreation><type>EPARGNE</type></compte><compte><id>3</id><titulaire>Youssef Ouazzani</titulaire><solde>9400.75</solde><dateCreation>2024-03-21</dateCreation><type>COURANT</type></compte><compte><id>4</id><titulaire>Nadia Bouhaddou</titulaire><solde>152000.0</solde><dateCreation>2024-04-08</dateCreation><type>EPARGNE</type></compte><compte><id>5</id><titulaire>Karim Tazi</titulaire><solde>32680.25</solde><dateCreation>2024-05-30</dateCreation><type>PROFESSIONNEL</type></compte><compte><id>6</id><titulaire>Imane Cherkaoui</titulaire><solde>5100.0</solde><dateCreation>2024-06-12</dateCreation><type>COURANT</type></compte></ns2:getComptesResponse></soap:Body></soap:Envelope>
+

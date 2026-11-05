@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Banque SOAP KSOAP</string>
+
+    <string name="titre_ecran">Portefeuille clients</string>
+    <string name="resume_vide">Portefeuille en cours de chargement</string>
+    <string name="resume_portefeuille">Encours total du portefeuille : %1$s DH</string>
+    <string name="chargement_en_cours">Interrogation du service SOAP en cours…</string>
+    <string name="aucun_compte">Aucun compte dans le portefeuille</string>
+    <string name="nb_comptes">%1$d comptes affiches</string>
+    <string name="erreur_reseau">Service injoignable : %1$s</string>
+    <string name="erreur_reseau_court">Le service SOAP ne repond pas</string>
+
+    <string name="ajouter_compte">Ajouter un compte</string>
+    <string name="nouveau_compte">Nouveau compte</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="annuler">Annuler</string>
+    <string name="fermer">Fermer</string>
+    <string name="supprimer">Supprimer</string>
+    <string name="details">Details</string>
+
+    <string name="champ_solde">Solde initial en dirhams</string>
+    <string name="champ_type">Type de compte</string>
+    <string name="type_courant">COURANT</string>
+    <string name="type_epargne">EPARGNE</string>
+
+    <string name="libelle_compte">Compte</string>
+    <string name="libelle_titulaire">Titulaire du compte</string>
+    <string name="libelle_solde">0,00 DH</string>
+    <string name="libelle_date">Ouvert le 01/01/2024</string>
+
+    <string name="supprimer_compte">Supprimer le compte</string>
+    <string name="confirmer_suppression">Voulez-vous vraiment supprimer le compte de %1$s ?</string>
+    <string name="compte_supprime">Compte supprime</string>
+    <string name="compte_ajoute">Compte ajoute</string>
+    <string name="erreur_ajout">Erreur lors de l ajout</string>
+    <string name="erreur_suppression">Erreur lors de la suppression</string>
+
+    <string name="details_titre">Details du compte</string>
+    <string name="details_compte">Numero : %1$d\nTitulaire : %2$s\nSolde : %3$s DH\nType : %4$s</string>
+</resources>

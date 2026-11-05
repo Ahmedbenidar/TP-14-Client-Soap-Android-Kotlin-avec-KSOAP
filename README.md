@@ -1,30 +1,5 @@
 # TP 14 - Client SOAP Android Kotlin avec KSOAP
 
-Application Android native ecrite en Kotlin qui consomme un service SOAP
-bancaire pour lister, creer et supprimer des comptes.
-
-Realise par Ahmed Benidar - application ma.ahmedbenidar.soapclient - service
-ma.ahmedbenidar.tp14 sur le port 8084.
-
----
-
-## 1. Presentation
-
-Le travail se compose de deux projets independants. D un cote un service SOAP
-Spring Boot et Apache CXF qui publie son contrat WSDL et stocke les comptes dans
-une base H2 en memoire. De l autre une application Android qui dialogue avec ce
-service en KSOAP, sans aucune bibliotheque REST.
-
-Le sujet d origine propose un service de demonstration incapable de repondre aux
-appels du client. Un service personnel a donc ete ecrit pour que les captures
-montrent de vrais echanges SOAP et non une simple maquette.
-
-L ecran principal affiche le nombre de comptes, le solde cumule du portefeuille
-et la liste detaillee avec le titulaire, le solde, le type et la date d ouverture.
-
-![Liste des comptes au demarrage](docs/captures/01-liste-comptes.png)
-
----
 
 ## 2. Compilation et installation
 
@@ -134,32 +109,3 @@ et le solde initial.
 ![Retour a la normale](docs/captures/10-retour-service-ok.png)
 
 ---
-
-## 9. Personnalisation du travail
-
-Le sujet a ete suivi dans son ensemble avec plusieurs choix propres pour eviter
-un rendu identique a celui des autres etudiants :
-
-- package et identifiant d application propres au projet ;
-- service SOAP personnel ecrit pour ce TP, sur un port different de celui du
-  TP 13 ;
-- champ titulaire ajoute a l entite, absent du sujet de base ;
-- troisieme type de compte professionnel en plus de courant et epargne ;
-- trois operations supplementaires pour la consultation par identifiant, le
-  filtrage par type et le solde global ;
-- affichage du solde cumule du portefeuille en tete de liste ;
-- fiche de detail ouverte au toucher d une carte ;
-- code, noms de methodes et libelles entierement en francais ;
-- jeu de donnees d amorcage marocain avec six titulaires et des montants varies ;
-- message d erreur explicite avec delai maximum de huit secondes.
-
----
-
-## 10. Remarque sur la verification
-
-Aucune campagne de tests automatises n a ete ajoutee au projet, conformement a
-la consigne. L outil SoapUI n est pas installe sur la machine de developpement,
-les appels ont donc ete envoyes directement en SOAP sur le point d acces et les
-reponses XML analysees telles quelles. La validation de l application Android a
-ete faite sur un emulateur, en parcourant reellement les ecrans de creation, de
-consultation et de suppression.
